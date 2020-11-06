@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Javascript</title>
+    <style>
+        .label{
+  display: inline-block;
+  width: 305px;
+  text-align: right;
+}
+  input[type=text]{
+  width: 34%;
+  padding: 12px 20px;
+  margin: 8px 0 0 330px;
+  display: inline-block;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 34px;
+}
+input[type=number]{
+  width: 34%;
+  padding: 12px 20px;
+  margin: 8px 0 0 330px;
+  display: inline-block;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 34px;
+}
+
+/* button{
+  width: 100px;
+  padding: 7px 20px;
+  margin: 3px 0;
+  display: inline-block;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 34px;
+ } */
+      .fdiv{
+        background-color: rgb(208, 230, 176,10);
+        line-height: 5;
+      }
+      .sdiv{
+        background-color: rgb(0, 34, 34,10);
+        line-height: 3;
+       
+      }
+
+      .tdiv{
+        background-color: rgb(252, 3, 177);
+        line-height: 3;
+       
+      }
+      .frdiv{
+        background-color: rgb(0, 0, 34,10);
+        line-height: 3;
+       
+      }
+      .fidiv{
+        background-color: rgb(26, 195, 216 ,56);
+        line-height: 3;
+       
+      }
+
+      .sidiv{
+        background-color: rgb(161, 7, 109  ,88);
+        line-height: 3;
+       
+      }
+
+      .sediv{
+        background-color: rgb(186, 252, 3  ,1);
+        line-height: 3;
+       
+      }
+
+      .eidiv{
+        background-color: rgba(10, 212, 13, 0.565);
+        line-height: 3;
+       
+      }
+
+      .nidiv{
+        background-color: rgba(10, 97, 212, 0.765);
+        line-height: 3;
+       
+      }
+
+      .tendiv{
+        background-color: rgba(212, 10, 77, 0.765);
+        line-height: 3;
+       
+      }
+
+      .elediv{
+        background-color: rgb(44, 10, 212);
+        line-height: 3;
+       
+      }
+      #p1{
+          font-weight: bolder;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          text-align: center;
+          font-size: 35px;
+          color: rgba(252, 70, 107, 29);
+      }
+      #p2{
+          font-weight: bolder;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          text-align: center;
+          font-size: 24px;
+          color: rgba(252, 288, 107, 29);
+      }
+      #demo{
+        color: rgb(219, 27, 27);
+        text-align: center;
+      }
+      #oddeven{
+        margin-left: 445px;
+      }
+      #truncate{
+        text-align: center;
+        color: black;
+      }
+      #findlarge{
+        text-align: center;
+        color: rgba(235, 6, 189, 0.793);
+        font-weight: bolder;
+      }
+
+      #alphabetd{
+        text-align: center;
+        color: rgba(6, 82, 235, 0.682);
+        font-weight: bolder;
+      }
+
+      #patternd{
+        text-align: center;
+        color: rgba(144, 44, 82, 0.682);
+        font-weight: bolder;
+      }
+
+      #freqd{
+        text-align: center;
+        color: rgba(253, 2, 98, 0.682);
+        font-weight: bolder;
+      }
+      
+    </style>
+</head>
+<body>
+    <div class="col-xs-12 fdiv">
+        <p id="p1">JAVASCRIPT PROJECTS</p>
+    </div>
+    
+    <div class="col-xs-12 sdiv">
+     <p id="p2">PRIME OR NOT</p>
+     <input type="number" id="prime" name="firstname" placeholder="Enter Number" onblur="primeornot()">
+    </div>
+    <div class="col-xs-12 tdiv">
+        <p id="p2">FREQUENT ITEM</p>
+        <input type="text" id="freq" name="firstname" placeholder="Enter Text">
+        <button onclick="freq()">CaseChange</button>
+        <div id="freqd" onclick="this.innerHTML=''"></div>
+    </div>
+    
+    <div class="col-xs-12 frdiv">
+        <p id="p2">CASE CHANGER</p>
+         <input type="text" id="casechange" name="firstname" placeholder="Enter Word">
+         <button onclick="casechange()">CaseChange</button>
+  </div>
+
+  <div class="col-xs-12 fidiv">
+    <p id="p2">SUM OF SQUARES</p>
+    
+     <input type="text" id="casechange" name="firstname" placeholder="Enter Number">
+     <button onclick="casechange()">CaseChange</button>
+</div>
+
+<div class="col-xs-12 sidiv">
+  <p id="p2">ODD/EVEN</p>
+   <button onclick="oddeven()" id="oddeven">CaseChange</button>
+</div>
+
+<div class="col-xs-12 sediv">
+  <p id="p2">STRING TRUNCATION</p>
+
+  <input type="text" id="string" name="firstname" placeholder="Enter String">
+  <input type="number" id="limit" name="firstname" placeholder="Enter Limit">
+  <button onclick="stringtruncation()">Truncate</button>
+   <div id="truncate" onclick="this.innerHTML=''"></div>
+</div>
+    
+<div class="col-xs-12 eidiv">
+  <p id="p2">SMALL/LARGE</p>
+  <input type="number" id="firstnm" name="firstnm" placeholder="Enter 1st Number">
+  <input type="number" id="secondnm" name="firstnm" placeholder="Enter 2nd Number">
+   <button onclick="findlarge()">Find Large</button>
+   <!-- onclick="setTimeout(myFunction, 3000);" -->
+   <div id="findlarge" onclick="this.innerHTML=''"></div>
+</div>  
+
+<div class="col-xs-12 nidiv">
+  <p id="p2">ALPHABETICAL ORDER</p>
+  <input type="text" id="alphabet" name="firstnm" placeholder="Enter text">
+   <button onclick="alphabet()">Orderize</button><!-- onclick="setTimeout(myFunction, 3000);" -->
+   <div id="alphabetd" onclick="this.innerHTML=''"></div>
+</div> 
+
+<div class="col-xs-12 tendiv">
+  <p id="p2">JAVASCRIPT PRINTING</p>
+  <button onclick="Javascriptp()" id="oddeven">Print Javascript</button>
+</div> 
+
+<div class="col-xs-12 elediv">
+  <p id="p2">* PRINT</p>
+   <button onclick="pattern()" id="oddeven">Print *</button>
+   <div id="patternd" onclick="this.innerHTML=''"></div>
+</div> 
+<script>
+  function primeornot(){
+  var n=document.getElementById("prime").value,i;
+  console.log(n[0]);
+  for(i=2;i<=(n[0]/2);i++)
+  {
+    if((n[0]%2)==0)
+      break;
+  }
+  if(i>(n[0]/2))
+   alert(n[0]+" is prime");
+  else
+  alert(n[0]+" is not prime");
+document.getElementById("prime").value=""; 
+  }
+
+  //script for frequent item
+function freq(){
+var arr1=document.getElementById("freq").value;
+var mf = 1;
+var m = 0;
+var item;
+for (var i=0; i<arr1.length; i++)
+{
+        for (var j=i; j<arr1.length; j++)
+        {
+                if (arr1[i] == arr1[j])
+                 m++;
+                if (mf<m)
+                {
+                  mf=m; 
+                  item = arr1[i];
+                }
+        }
+        m=0;
+}
+document.getElementById("freq").value=""
+document.getElementById("freqd").innerHTML=item+" is "+mf+" times"
+}
+
+        //Script for case changing
+        function casechange(){
+        var str = document.getElementById("casechange").value;
+        var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+        var result = [];
+  for(var x=0; x<str.length; x++)
+  {
+    if(UPPER.indexOf(str[x]) !== -1)
+    {
+      result.push(str[x].toLowerCase());
+    }
+    else if(LOWER.indexOf(str[x]) !== -1)
+    {
+      result.push(str[x].toUpperCase());
+    }
+    else 
+    {
+      result.push(str[x]);
+    }
+  }
+  document.getElementById("casechange").value="";
+  alert("Case changed of "+str+" is "+result.join(''));
+}
+//Script for oddeven
+function oddeven(){
+  alert("The output is in Console");
+  for (var x=0; x<=15; x++) {
+         if (x % 2 === 0) {
+                console.log(x + " is even");   
+                
+        }
+        else {
+                console.log(x + " is odd");
+                
+        }
+}
+
+}
+//string truncation
+function stringtruncation(){
+var string=document.getElementById("string").value;
+var limit=document.getElementById("limit").value;
+if (string.length == limit) {
+    // console.log("No truncation required");
+    document.getElementById("truncate").innerHTML='No truncation required';
+  }
+else{
+  // console.log(string.slice(0, limit) + '...');
+  document.getElementById("truncate").innerHTML=string.slice(0, limit) + '...';
+}
+document.getElementById("string").value="";
+document.getElementById("limit").value="";
+}
+
+//small or large number
+function findlarge(){
+  var fn=document.getElementById("firstnm").value;
+  var sn=document.getElementById("secondnm").value;
+
+  if (fn == sn) {
+    document.getElementById("findlarge").innerHTML=fn + " is equal to " + sn;
+} else if (fn > sn) {
+  document.getElementById("findlarge").innerHTML=fn + " is larger to " + sn;
+} else {
+  document.getElementById("findlarge").innerHTML=fn + " is smaller to " + sn;
+}
+
+document.getElementById("firstnm").value="";
+document.getElementById("secondnm").value="";
+}
+//Alphabet Orderiser
+function alphabet(){
+  var a=document.getElementById("alphabet").value;
+  document.getElementById("alphabetd").innerHTML=a.split('').sort().join('');
+  document.getElementById("alphabet").value="";
+}
+
+
+//JAvascript printing
+function Javascriptp(){
+  var str ='JAVASCRIPT',m,n,out="";
+  for(m=0;m<str.length;m++){
+     for(n=0;n<=m;n++){
+       out+=str[n]+" "
+     }
+     document.write(out+"<br>")
+     out=""
+  }
+}
+
+
+//*Printing
+function pattern(){
+  var x,y,chr;
+  alert("OUTPUT'S IN CONSOLE!!")
+for(x=1; x <=6; x++)
+{
+   for (y=1; y < x; y++)
+     {
+    chr=chr+("*");        
+      }
+ console.log(chr);   
+ chr='';
+}
+}
+</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>   
+</body>
+</html>
